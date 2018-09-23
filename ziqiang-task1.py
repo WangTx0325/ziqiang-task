@@ -15,48 +15,65 @@ while 1==1:
         elif x == 2:
             import base64
             str = input("\n请输入你想进行加密的内容:\n")
+
             
-            while str.strip() == "":
-                str = input("\n请输入你想进行加密的内容:\n")
+            while str == "":
+                str = input("你的输入不符合规范，请重新输入:\n")
 
             string = str.encode('utf-8')
-            base64_bytes = base64.b64encode(string)
-            print("\n密文为:",base64_bytes.decode())
+            bytes = base64.b64encode(string)
+            print("密文为:",bytes.decode())
 
-        elif x == 3:#有一个不完善的地方，输入汉字（不合法输入）时得到的明文为空，我还不会解决
+        elif x == 3:
             import base64
             str = input("\n请输入你想进行解密的内容:\n")
 
-            while str.strip() == "":
-                str = input("\n请输入你想进行解密的内容:\n")
+            import re#利用正则表达式判断输入的字符串是否含有汉字
+            zhPattern = re.compile(u'[\u4e00-\u9fa5]+')
+            match = zhPattern.search(str)
 
-            string = str.encode('utf-8')
+            while str == "" or match:
+                
+                str = input("\n你的输入不符合规范，请重新输入:\n")
+                match = zhPattern.search(str)
+
             try:
+                string = str.encode('utf-8')
                 text = base64.b64decode(string)
-                
-                if text.strip() == "":
-                    print("请输入正确的base64编码")
-                else:
-                    print("\n明文为:",text.decode())
-                
+                print("明文为:",text.decode())
+                a = 1
             except BaseException:
-                print("请输入正确的base64编码")
+                a = 0
 
+            while a == 0:
+
+                str = input("\n你的输入不符合规范，请重新输入:\n")
+                match = zhPattern.search(str)
+                while str == "" or match:
+                    str = input("\n你的输入不符合规范，请重新输入:\n")
+                try:
+                    string = str.encode('utf-8')
+                    text = base64.b64decode(string)
+                    print("明文为:",text.decode())
+                    a = 1
+                except BaseException:
+                    a = 0
+            
         elif x == 4:
             import qrcode
             a = input("\n请输入二维码的内容:\n")
 
-            while a.strip() == "":
-                a = input("\n请输入二维码的内容:\n")
+            while a == "":
+                a = input("你的输入不符合规范，请重新输入:\n")
             img = qrcode.make(a)
             img.get_image().show()
             img.save('test.png')
 
         else:
-            print("\n你的输入不符合规范，请重新输入")
+            print("\n你的输入不符合规范，请重新输入:")
     
     else:
-        print("\n你的输入不符合规范，请重新输入")
+        print("\n你的输入不符合规范，请重新输入:")
 
     
 
