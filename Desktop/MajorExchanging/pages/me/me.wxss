@@ -1,0 +1,152 @@
+.test{
+  width: 100rpx;
+	height: 100rpx;
+}
+
+.userinfo-avatar {
+  /* text-align: center; */
+  margin-top: 40rpx;
+  margin-left: 41%;
+	width: 140rpx;
+	height: 140rpx;
+	border-radius: 70rpx;
+  overflow: hidden;
+}
+
+.userinfo-nickname {
+  text-align: center;
+  margin-top: 30rpx;
+  font-size: 30rpx;
+  color: rgb(255, 255, 255);
+}
+.userinfo-academy{
+  margin-top: 30rpx;
+  color: rgb(14, 1, 1);
+}
+
+
+
+.version {
+  width:100%;
+  height: 40rpx;
+	line-height: 40rpx;
+	font-size: 24rpx;
+	text-align: center;  
+  padding: 40rpx;
+}
+
+.content{
+  flex: 1;
+  display: flex;
+  position: relative;
+  z-index: 10;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 150rpx;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(244,244,244,0)), color-stop(0.1, #f4f4f4), to(#f4f4f4));
+  opacity: 0;
+  transform: translate3d(0,100%,0);
+  animation: rise cubic-bezier(0.19, 1, 0.22, 1) forwards;
+}
+.function{
+  z-index: 10;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(244,244,244,0)), color-stop(0.1, #f4f4f4), to(#f4f4f4));
+  font-size: 34rpx;
+  color: rgb(56, 56, 56);
+}
+.remind-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 300rpx;
+}
+.remind-img {
+  width: 250rpx;
+  height: 250rpx;
+  padding-bottom: 25rpx;
+}
+
+@keyframes rise{
+  0% {opacity: 0;transform: translate3d(0,100%,0);}
+  50% {opacity: 1;}
+  100% {opacity: 1;transform: translate3d(0,450rpx,0);}
+}
+.title{
+  position: absolute;
+  top: 30rpx;
+  left: 60%;
+  width: 450rpx;
+  height: 150rpx;
+  margin-left: -300rpx;
+  opacity: 0;
+  animation: show 2.5s cubic-bezier(0.19, 1, 0.22, 1) .5s forwards;
+}
+
+.smalltitle{
+  position: absolute;
+  top: 50rpx;
+  left: 50%;
+  width: 600rpx;
+  height: 200rpx;
+  margin-left: -300rpx;
+  opacity: 0;
+  animation: show 2.5s cubic-bezier(0.19, 1, 0.22, 1) .5s forwards;
+}
+
+@keyframes show{
+  0% {opacity: 0;}
+  100% {opacity: .95;}
+}
+
+.hd {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1000rpx;
+  margin-left: -500rpx;
+  height: 200rpx;
+  transition: all .35s ease;
+}
+
+.logo {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: 200rpx;
+  width: 180rpx;
+  height: 180rpx;
+  margin-left: -80rpx;
+  border-radius: 160rpx;
+  animation: sway 10s ease-in-out infinite;
+  opacity: .95;
+}
+
+.container {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: #a1cdea;
+  align-items: stretch;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+
+.stu_info{
+  text-align: center;
+  font-size: 35rpx;
+  color: white;
+  padding-top: 10rpx;
+}
+
+.blank{
+    height: 70rpx;
+}

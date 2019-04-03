@@ -1,0 +1,59 @@
+{
+    "pages": [
+        "pages/discovery/discovery",
+        "pages/answer/answer",
+        "pages/message/message",
+        "pages/task/task",
+        "pages/me/me",
+        "pages/identify/identify",
+        "pages/partner/partner",
+        "pages/like/like",
+        "pages/guide/guide",
+        "pages/index/index",
+        "pages/logs/logs",
+        "data",
+        "pages/detail",
+        "pages/guide/guide_detail"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#a1cdea",
+        "navigationBarTitleText": "专交遇到你",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "selectedColor": "#a1cdea",
+        "list": [
+            {
+                "pagePath": "pages/message/message",
+                "iconPath": "/static/Message.png",
+                "selectedIconPath": "/static/Message.png",
+                "text": "消息"
+            },
+            {
+                "pagePath": "pages/discovery/discovery",
+                "iconPath": "/static/Discovery.png",
+                "selectedIconPath": "/static/Discovery.png",
+                "text": "发现"
+            },
+            {
+                "pagePath": "pages/task/task",
+                "iconPath": "/static/Task.png",
+                "selectedIconPath": "/static/Task.png",
+                "text": "任务"
+            },
+            {
+                "pagePath": "pages/me/me",
+                "iconPath": "/static/Me.png",
+                "selectedIconPath": "/static/Me.png",
+                "text": "我的"
+            }
+        ]
+    },
+    "networkTimeout": {
+        "request": 20000,
+        "connectSocket": 20000,
+        "uploadFile": 20000,
+        "downloadFile": 20000
+    }
+}

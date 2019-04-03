@@ -1,0 +1,15 @@
+<view class='edit-header'>
+    <!-- <text class='header-exit' bindtap='saveEditOrNot'>取消</text> -->
+    <text class='header-delive' bindtap='postData'>提交</text>
+</view>
+<view class='edit-main'>
+    <textarea class='edit-text' placeholder='简单说说你们今天都聊了什么吧' placeholder-style='color:#888' maxlength="{{max}}" bindinput="getInputValue">
+    </textarea>
+     <text class='currentWordNumber'>{{currentWordNumber|0}}/{{max}}</text>
+    <view class='edit-img'>
+        <view wx:for="{{imgArr}}" wx:key="{{index}}">
+            <image src='{{item}}' mode='aspectFill' />
+        </view>
+        <view class='iconfont icon-plus' catchtap='chooseImage'></view>
+    </view>
+</view>

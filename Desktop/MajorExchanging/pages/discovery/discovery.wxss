@@ -1,0 +1,19 @@
+.container{
+  height: 1500rpx;
+}
+
+.container{
+  padding: 0;
+  font-size: 20rpx;
+  background: #F0F4F3;
+  color: #000;
+}
+.container image{
+  height: 30rpx;
+  width: 30rpx;
+  vertical-align: -3px;
+  margin-right: 10rpx;
+}
+/* .comment image{
+  transform: scale(.85);
+} */

@@ -1,0 +1,40 @@
+<view class="container">
+    <view class="blank"></view>
+    <block wx:if="{{isBind}}">
+        <i-card extra="{{student.name}} {{student.grade}} {{student.academy}}" thumb="{{student.avatar}}">
+            <view slot="footer">学号：{{student.stu_id}}</view>
+            <view slot="footer">专业：{{student.major}}</view>
+        </i-card>
+    </block>
+    <block wx:else>
+        <i-card extra="未绑定" thumb="../../static/user.png">
+        </i-card>
+    </block>
+    <view class="blank"></view>
+</view>
+<view class='function'>
+    <i-cell-group>
+        <block wx:if="{{isBind}}">
+            <i-cell title="解除绑定" is-link url="/pages/remove/remove">
+                <i-icon type="prompt" slot="icon" />
+            </i-cell>
+        </block>
+        <block wx:else>
+            <i-cell title="身份认证" is-link url="/pages/identify/identify">
+                <i-icon type="addressbook" slot="icon" />
+            </i-cell>
+        </block>
+        <i-cell title="配对信息" is-link url="/pages/partner/partner">
+            <i-icon type="group" slot="icon" />
+        </i-cell>
+        <i-cell title="我的收藏" is-link url="/pages/like/like">
+            <i-icon type="like" slot="icon" />
+        </i-cell>
+        <i-cell title="新手引导" is-link url="/pages/guide/guide">
+            <i-icon type="feedback" slot="icon" />
+        </i-cell>
+        <i-cell title="联系我们" is-link open-type="contact" bind:contact="onContact">
+            <i-icon type="message" slot="icon" />
+        </i-cell>
+    </i-cell-group>
+</view>

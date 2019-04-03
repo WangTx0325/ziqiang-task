@@ -1,0 +1,12 @@
+<view>
+	<view>
+        <view class="img">
+            <image src="../../static/test.jpg"></image>
+        </view>
+    </view>
+    <block wx:for="{{tip_list}}" wx:key="index" wx:for-item="item">
+        <i-cell-group>
+            <i-cell title="{{item.message}}" is-link id="{{index}}" bindtap='showDetail'></i-cell>
+        </i-cell-group>
+    </block>
+</view>

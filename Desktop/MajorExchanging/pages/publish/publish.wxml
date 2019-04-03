@@ -1,0 +1,19 @@
+<view class='edit-header'>
+    <!-- <text class='header-exit' bindtap='saveEditOrNot'>取消</text> -->
+    <text class='header-delive' bindtap='postData'>提交</text>
+</view>
+<view class='edit-main'>
+    <textarea class='edit-text' maxlength="{{max}}" bindinput="getInputValue">
+    </textarea>
+     <!-- <text class='currentWordNumber'>{{currentWordNumber|0}}/{{max}}</text> -->
+    <view class='edit-img'>
+        <view wx:for="{{imgArr}}" wx:key="{{index}}">
+            <image src='{{item}}' mode='aspectFill' />
+        </view>
+        <view class='iconfont icon-plus' catchtap='chooseImage'></view>
+    </view>
+</view>
+<view class="hideItem">
+  <text>匿名 </text>
+  <switch class="hideSwitch" checked="{{isHided}}" bindchange="changeSwitch" color="#a1cdea"></switch>
+</view>

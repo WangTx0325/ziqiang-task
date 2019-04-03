@@ -1,0 +1,7 @@
+<swiper class="swiper" indicator-dots="true" indicator-active-color="#a1cdea" autoplay="true" interval="5000" duration="1000">  
+   <block wx:for="{{lunbo}}" wx:for-index="index">  
+    <swiper-item>  
+     <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>  
+    </swiper-item>  
+   </block>  
+  </swiper>

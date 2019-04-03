@@ -1,0 +1,29 @@
+<!--pages/guide/guide_detail.wxml-->
+<view>
+    <view>
+        <view class="img">
+            <image src="../../static/test.jpg"></image>
+        </view>
+    </view>
+    <view wx:if="{{detail_index==0}}">
+        <view class="i-class i-card {{ full ? 'i-card-full' : '' }}">
+            <view class="i-class i-card-header">
+                <view class="i-card-header-extra">配对成功后，我们会给您发送消息，请注意微信的服务通知。您也可以在“配对信息”界面实时查看匹配进度</view>
+            </view>
+        </view>
+    </view>
+    <view wx:elif="{{detail_index==1}}">
+        <view class="i-class i-card {{ full ? 'i-card-full' : '' }}">
+            <view class="i-class i-card-header">
+                <view class="i-card-header-extra">待完善1</view>
+            </view>
+        </view>
+    </view>
+    <view wx:elif="{{detail_index==2}}">
+        <view class="i-class i-card {{ full ? 'i-card-full' : '' }}">
+            <view class="i-class i-card-header">
+                <view class="i-card-header-extra">待完善2</view>
+            </view>
+        </view>
+    </view>
+</view>

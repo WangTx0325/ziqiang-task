@@ -1,0 +1,29 @@
+
+<view class="container chat">
+  <view class="chat-item flex-wrp">
+    <view class="avatar flex-item">
+      <image src="/static/icon9.png"></image>
+    </view>
+    <view class="chat-content flex-item">
+      <view class="chat-source">
+        <text class="chatmate">小专</text>
+        <text class="lasttime">1分钟前</text>
+      </view>
+      <text class="chat-txt">同学你好</text>
+    </view>
+  </view>
+  <view class="chat-item flex-wrp">
+    <view class="avatar flex-item">
+      <image src="/static/icon8.png"></image>
+    </view>
+    <view class="chat-content flex-item">
+      <view class="chat-source">
+        <text class="chatmate">林益可</text>
+        <text class="lasttime">1小时前</text>
+      </view>
+      <text class="chat-txt">同学我也想转你这个专业</text>
+    </view>
+  </view>
+</view>
+
+

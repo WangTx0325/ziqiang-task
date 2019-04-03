@@ -1,0 +1,41 @@
+<scroll-view scroll-y="true" class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower"  scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <block wx:for="{{feed}}" wx:for-index="idx" wx:for-item="item" data-idx="{{idx}}">
+        <view class="feed-item">
+            <view class="feed-source">
+                <a class="">
+                    <view class="avatar">
+                        <image src="{{item.feed_source_img}}"></image>
+                    </view>
+                    <text>{{item.feed_source_name}}\n{{item.feed_source_major}}</text>
+                    <!-- <text>{{item.feed_source_major}}</text> -->
+                </a>
+                <image class="item-more" mode="aspectFit" src="/static/more.png"></image>
+            </view>
+            <view class="feed-content">
+                <view class="answer-body">
+                    <view bindtap="bindItemTap">
+                        <text class="answer-txt">{{item.answer_ctnt}}</text>
+                    </view>
+                    <view class="answer-actions" bindtap="bindItemTap">
+                        <view class="like dot">
+                            
+                            <image src="/static/heart2.png"></image>
+                            <a>{{item.good_num}} 点赞  </a>
+                        </view>
+                        <view class="comments dot">
+                            
+                            <image src="/static/comment.png"></image>
+                            <a>{{item.comment_num}} 评论  </a>
+                        </view>
+                        <view class="follow-it">
+                           
+                            <image src="/static/star2.png"></image>
+                             <a> 收藏 </a>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+</scroll-view>
+
